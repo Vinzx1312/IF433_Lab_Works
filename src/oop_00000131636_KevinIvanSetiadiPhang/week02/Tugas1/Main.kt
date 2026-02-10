@@ -1,4 +1,4 @@
-package oop_00000131636_KevinIvanSetiadiPhang.week02.Tugas
+package oop_00000131636_KevinIvanSetiadiPhang.week02.Tugas1
 
 import java.util.Scanner
 
