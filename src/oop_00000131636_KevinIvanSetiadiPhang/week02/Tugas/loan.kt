@@ -1,4 +1,4 @@
-package oop_00000131636_KevinIvanSetiadiPhang.week02
+package oop_00000131636_KevinIvanSetiadiPhang.week02.Tugas
 
 class Loan(
     val bookTitle: String,
