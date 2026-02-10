@@ -25,7 +25,7 @@ fun main() {
         val major = scanner.nextLine()
 
         //onstalasi objek karena data sudah aman
-        val s1 = student(name, nim, major)
+        val s1 = Student(name, nim, major)
         println("Status: Pendaftaran Selesai.")
     }
 }
