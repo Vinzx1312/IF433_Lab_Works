@@ -14,6 +14,7 @@ fun main() {
 
     //3. test computed property
     println("pajak yang harus dibayar : ${e.tax}")
+
     println("--- Test Error ---")
     e.salary = 5000 // ini akan meledakkan  program anda
 }
