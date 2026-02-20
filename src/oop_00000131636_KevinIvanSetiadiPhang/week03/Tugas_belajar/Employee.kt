@@ -1,4 +1,4 @@
-package oop_00000131636_KevinIvanSetiadiPhang.week03
+package oop_00000131636_KevinIvanSetiadiPhang.week03.Tugas_belajar
 
 class Employee(val name: String) {
     var salary: Int = 0
@@ -14,7 +14,7 @@ class Employee(val name: String) {
     //Hanya bisa diakases di file/class ini saja
     private var performanceRating: Int = 3
 
-    fun increasPerformance() {
+    fun increasePerformance() {
         performanceRating++
         println("Kinerja $name meningkat! Rating :$performanceRating")
     }

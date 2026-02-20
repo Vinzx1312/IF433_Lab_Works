@@ -1,4 +1,4 @@
-package oop_00000131636_KevinIvanSetiadiPhang.week03
+package oop_00000131636_KevinIvanSetiadiPhang.week03.Tugas_belajar
 
 fun main() {
     val e = Employee("Budi")
