@@ -1,5 +1,7 @@
 package oop_00000131636_KevinIvanSetiadiPhang.week04.Tugas1
 
+import oop_00000131636_KevinIvanSetiadiPhang.week04.Latihan_LAB.Car
+
 // ElectricCar adalah Child dari class Car
 class ElectricCar(brand: String, numberOfDoors: Int, val batteryCapacity: Int) : Car(brand, numberOfDoors) {
 
