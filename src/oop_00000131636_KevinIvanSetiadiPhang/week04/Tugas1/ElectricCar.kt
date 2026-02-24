@@ -11,5 +11,6 @@ class ElectricCar(brand: String, numberOfDoors: Int, val batteryCapacity: Int) :
     }
 
     // Method honk() tetap menggunakan implementasi dari Car (tidak perlu di-override ulang)
-    // Method openTrunk() tetap menggunakan implementasi dari Car //
+    // Method openTrunk() tetap menggunakan implementasi dari Car
+    // check point 6
 }
