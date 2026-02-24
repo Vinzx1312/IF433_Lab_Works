@@ -4,6 +4,9 @@ package oop_00000131636_KevinIvanSetiadiPhang.week04.Latihan_LAB
 open class Car(brand: String, val numberOfDoors: Int) : Vehicle(brand) {
 
     fun openTrunk(){
-        println("Bagasi mobl $brand dengan $numberOfDoors pintu dibuka")
+        println("Bagasi mobil $brand dengan $numberOfDoors pintu dibuka")
+    }
+    override fun honk() {
+        println("TIN TIN! Mobil $brand lewati!")
     }
 }
