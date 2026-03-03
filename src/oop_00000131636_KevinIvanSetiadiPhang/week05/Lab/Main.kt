@@ -8,7 +8,7 @@ fun main() {
     val daftarPegawai: List<Pegawai> = listOf(dosen1, admin1)
 
     println("=== AKTIVITAS PEGAWAI ===")
-    for (pegwai in daftarPegawai) {
+    for (pegawai in daftarPegawai) {
         //Pemanggilan runtime polymmorphism
         pegawai.bekerja()
 
@@ -25,7 +25,7 @@ fun main() {
                 pegawai.doAdminWork()
             }
         }
-        println("-----------------------------"
+        println("-----------------------------")
     }
 
 }
