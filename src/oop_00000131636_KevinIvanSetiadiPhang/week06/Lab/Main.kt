@@ -1,13 +1,12 @@
 package oop_00000131636_KevinIvanSetiadiPhang.week06.Lab
 
-//fungsi ini decoupled! tidak peduli kelas aslinya
-
-fun processCheckout(method: PaymentMethod, amount: Double){
+// Fungsi ini Decoupled! Tidak peduli kelas aslinya apa.
+fun processCheckout(method: PaymentMethod, amount: Double) {
     println("-> Memulai checkout...")
-    method.pay(amount) // dynamic polymorphism in action
+    method.pay(amount) // Dynamic polymorphism in action
 }
 
-fun main () {
+fun main() {
     val myWatch = Smartwatch()
     myWatch.showTime()
 
@@ -17,7 +16,25 @@ fun main () {
     val pay1 = Gopay()
     val pay2 = CreditCard()
 
-    println("\n=== TESTIG CHECKOUT ===")
+    println("\n=== TESTING CHECKOUT ===")
     processCheckout(method = pay1, amount = 50000.0)
     processCheckout(method = pay2, amount = 150000.0)
+
+    // === SMART HOME SYSTEM ===
+    println("\n=== SMART HOME SYSTEM ===")
+
+    // Instansiasi perangkat
+    val lamp    = SmartLamp(id = "SL-001", name = "Ruang Tamu")
+    val speaker = SmartSpeaker(id = "SS-001", name = "Google Nest Dapur")
+    val cctv    = SmartCCTV(id = "SC-001", name = "Ezviz Garasi")
+
+    // Instansiasi SmartHomeHub dan tambahkan semua perangkat
+    val hub = SmartHomeHub()
+    hub.addDevice(lamp)
+    hub.addDevice(speaker)
+    hub.addDevice(cctv)
+
+    // Test fungsionalitas Hub
+    hub.activateSecurityMode()
+    hub.turnOffAllSwitches()
 }

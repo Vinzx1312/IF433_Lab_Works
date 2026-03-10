@@ -1,4 +1,4 @@
-package oop_00000131636_KevinIvanSetiadiPhang.week06.Tugas
+package oop_00000131636_KevinIvanSetiadiPhang.week06.Lab
 
 class SmartLamp(
     override val id: String,
