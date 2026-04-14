@@ -1,12 +1,9 @@
 package oop_00000131636_KevinIvanSetiadiPhang.week08.tugasMandiri
 
 
-public class JavaPaymentService {
-    /**
-     * Memproses pembayaran berdasarkan productId.
-     * Selalu menghasilkan Transaction ID — tidak pernah null.
-     */
+object JavaPaymentService {
+    @JvmStatic
     fun processPayment(productId: String): String {
-        return "TRX-" + productId + "-SUCCESS"
+        return "TRX-$productId-SUCCESS"
     }
 }
