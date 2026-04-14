@@ -40,7 +40,7 @@ class ApiParser {
     }
 
     /**
-     * Melakukan checkout produk ke JavaPaymentService.
+     * //Melakukan checkout produk ke JavaPaymentService.
      * Menggunakan !! karena kita YAKIN JavaPaymentService selalu menghasilkan Transaction ID.
      */
     fun checkout(product: Product) {
