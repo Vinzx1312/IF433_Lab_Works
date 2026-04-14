@@ -1,5 +1,7 @@
 package oop_00000131636_KevinIvanSetiadiPhang.week08.LatihanLab
 
+import java.text.ListFormat
+
 fun main() {
     println("===TEST SAFE CALLS & ELVIS ===")
     val emptyOrder = Order(null,null)
@@ -11,10 +13,19 @@ fun main() {
     println("\n=== TEST LET BLOCK ===")
     val validOrder = Order(null, 250000)
 
-    val receipt = validOrder.totalPrice.let { price ->
+    val receipt = validOrder.totalPrice?.let { price ->
         //blok ini hanya jalan jika totalPrice tidak null
         val tax = price * 0.11
-        "transaksi Valid. harga: Rp$price, pajak: Rp$tax"
+        "Transaksi Valid. Harga: Rp$price, Pajak: Rp$tax"
     } ?: "Transaksi Invalid:Harga Belum di-set!"
     println(receipt)
+
+    println("\n=== TEST SAFE CASTING ===")
+    val mixedData: List<Any> = listOf(
+        "Smartphone",
+        1500000,
+        UserProfile("Andi", null),
+        "Laptop",
+        4500000.0
+    )
 }
