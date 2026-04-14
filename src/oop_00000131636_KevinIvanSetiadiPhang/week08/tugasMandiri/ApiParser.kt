@@ -61,4 +61,4 @@ class ApiParser {
         is Electronic -> "${product.name} (Warranty ${product.warrantyMonths} bulan)"
         is Clothing   -> "${product.name} (Size: ${product.size})"
     }
-} //
+} ///
