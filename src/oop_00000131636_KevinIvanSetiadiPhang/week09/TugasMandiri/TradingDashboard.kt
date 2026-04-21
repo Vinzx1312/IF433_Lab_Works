@@ -33,4 +33,13 @@ fun main() {
     // ─────────────────────────────────────────────
     val losingTrades = closedTrades
         .filter { it.roe <= 0 }
+
+    // ─────────────────────────────────────────────
+    // CHECKPOINT 15: Pipeline 4 — Top Performers
+    // Urutkan dari ROE tertinggi, lalu format ke String
+    // ─────────────────────────────────────────────
+    val topPerformersString = winningTrades
+        .sortedByDescending { it.roe }
+        .map { "WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage}x)" }
+
 }
