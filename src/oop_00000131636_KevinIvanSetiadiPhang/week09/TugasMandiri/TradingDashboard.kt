@@ -70,5 +70,17 @@ fun main() {
     println("\n--- UNIQUE TRADING PAIRS ---")
     println(uniquePairs)
 
+    // ─────────────────────────────────────────────
+    // CHECKPOINT 20: Statistik Tambahan doang
+    // ─────────────────────────────────────────────
+    val totalClosed = closedTrades.size
+    val totalWin    = winningTrades.size
+    val winRate     = if (totalClosed > 0) (totalWin.toDouble() / totalClosed * 100) else 0.0
+
+    println("\n--- SUMMARY ---")
+    println("Total Closed Trades : $totalClosed")
+    println("Win                 : $totalWin")
+    println("Loss                : ${losingTrades.size}")
+    println("Win Rate            : ${"%.1f".format(winRate)}%")
 
 }
