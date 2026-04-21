@@ -56,5 +56,13 @@ fun main() {
         .map { it.pair }
         .toSet()
 
+    // ─────────────────────────────────────────────
+    // CHECKPOINT 18 & 19: Tampilkan Dashboard
+    // ─────────────────────────────────────────────
+    println("=== CRYPTO TRADING DASHBOARD ===")
+
+    println("\n--- TOP PERFORMERS (WIN) ---")
+    topPerformersString.forEach { println(it) }
+
 
 }
