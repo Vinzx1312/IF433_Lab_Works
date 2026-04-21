@@ -15,4 +15,10 @@ fun main() {
         TradeLog("BTCUSDT", "LONG", 20, 6.3, "OPEN"),   // masih terbuka
         TradeLog("ETHUSDT", "SHORT", 30, -1.5, "OPEN")    // masih terbuka
     )
+    // ─────────────────────────────────────────────
+    // CHECKPOINT 12: Pipeline 1 — Filter CLOSED
+    // ─────────────────────────────────────────────
+    val closedTrades = tradeHistory
+        .filter { it.status == "CLOSED" }
+
 }
