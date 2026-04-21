@@ -41,5 +41,13 @@ fun main() {
     val topPerformersString = winningTrades
         .sortedByDescending { it.roe }
         .map { "WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage}x)" }
+// ─────────────────────────────────────────────
+    // CHECKPOINT 16: Pipeline 5 — Worst Performers
+    // Urutkan dari ROE terkecil (minus terbesar), lalu format ke String
+    // ─────────────────────────────────────────────
+    val worstPerformersString = losingTrades
+        .sortedBy { it.roe }
+        .map { "LOSS [${it.pair} - ${it.position}]: ${it.roe}% ROE (Lev: ${it.leverage}x)" }
+
 
 }
