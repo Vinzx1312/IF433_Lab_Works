@@ -42,4 +42,12 @@ fun main() {
     txRepo.getAll().forEach { tx ->
         println("  - ID: ${tx.id}, Jumlah: ${tx.amount}")
     }
+
+
+    // Checkpoint 20: Final test - cari koin dengan balance > 1.0
+    println("\n=== PENCARIAN: Koin dengan balance > 1.0 ===")
+    val bigCoins = coinRepo.search { it.balance > 1.0 }
+    bigCoins.forEach { coin ->
+        println("  - ${coin.name}: ${coin.balance}")
+    }
 }
