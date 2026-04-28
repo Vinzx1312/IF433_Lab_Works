@@ -12,4 +12,12 @@ fun main() {
 
     // Checkpoint 17: Wrap repository data into ApiResponse
     val response = ApiResponse("200 OK", coinRepo.getAll())
+
+    // Checkpoint 18: Print dashboard using forEach on generic list
+    println("=== CRYPTO DASHBOARD ===")
+    println("Status Response: ${response.status}")
+    println("Daftar Koin:")
+    response.data.forEach { coin ->
+        println("  - ${coin.name}: ${coin.balance} unit")
+    }
 }
