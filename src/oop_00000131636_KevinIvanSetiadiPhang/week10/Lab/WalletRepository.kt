@@ -11,7 +11,7 @@ class WalletRepository<T> {
         return items
     }
 
-    // Checkpoint 14: Search logic dengan constraint <T : Any>
+
     fun search(predicate: (T) -> Boolean): List<T> {
         return items.filter(predicate)
     }
