@@ -8,3 +8,8 @@ fun main() {
     coinRepo.add(Coin("BTC", 0.5))
     coinRepo.add(Coin("ETH", 2.75))
     coinRepo.add(Coin("USDT", 500.0))
+
+
+    // Checkpoint 17: Wrap repository data into ApiResponse
+    val response = ApiResponse("200 OK", coinRepo.getAll())
+}
