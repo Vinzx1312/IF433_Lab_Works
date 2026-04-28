@@ -20,4 +20,26 @@ fun main() {
     response.data.forEach { coin ->
         println("  - ${coin.name}: ${coin.balance} unit")
     }
+
+    // Checkpoint 19: Initialize and populate transaction repository
+    val txRepo = WalletRepository<Transaction>()
+    txRepo.add(Transaction("TX001", 0.1))
+    txRepo.add(Transaction("TX002", 1.5))
+    txRepo.add(Transaction("TX003", 250.0))
+
+    println("\n=== RIWAYAT TRANSAKSI ===")
+    txRepo.getAll().forEach { tx ->
+        println("  - ID: ${tx.id}, Jumlah: ${tx.amount}")
+    }
+
+    // Checkpoint 19: Initialize and populate transaction repository
+    val txRepo = WalletRepository<Transaction>()
+    txRepo.add(Transaction("TX001", 0.1))
+    txRepo.add(Transaction("TX002", 1.5))
+    txRepo.add(Transaction("TX003", 250.0))
+
+    println("\n=== RIWAYAT TRANSAKSI ===")
+    txRepo.getAll().forEach { tx ->
+        println("  - ID: ${tx.id}, Jumlah: ${tx.amount}")
+    }
 }
