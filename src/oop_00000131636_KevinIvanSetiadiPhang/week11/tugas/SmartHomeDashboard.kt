@@ -26,3 +26,13 @@ fun main() {
         println("(LOG) Kamera terhubung")
         homeDevices.add(it)
     }
+
+
+    // CHECKPOINT 16: Konfigurasi AC & Kabel (run)
+    val acUnit = run {
+        SmartDevice("Daikin Inverter (Kabel 3x2.5)", "HVAC", false, 800)
+    }
+    homeDevices.add(acUnit)
+
+    // Tambahkan alat pakan peliharaan
+    homeDevices.add(SmartDevice("Picolo's Auto Feeder", "Pet Care", true, 10))
