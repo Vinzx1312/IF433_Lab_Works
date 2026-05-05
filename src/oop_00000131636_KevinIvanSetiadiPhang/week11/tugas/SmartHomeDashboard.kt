@@ -43,3 +43,9 @@ fun main() {
     searchResult?.let {
         println(it.diagnose())
     }
+
+    // CHECKPOINT 18: with untuk Format Summary
+    println("\n=== DASHBOARD SUMMARY ===")
+    with(homeDevices) {
+        println("Total perangkat terdaftar: ${this.size}")
+    }
