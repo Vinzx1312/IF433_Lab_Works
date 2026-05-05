@@ -53,3 +53,14 @@ fun main() {
     // CHECKPOINT 19: Kalkulasi Daya dengan run
     val totalPower = homeDevices.run { sumOf { it.powerLoad } }
     println("Total konsumsi daya: $totalPower Watt")
+
+    // CHECKPOINT 20: Eksekusi Dashboard - iterasi forEach
+    println("\n=== FULL DIAGNOSTICS REPORT ===")
+    homeDevices.forEach { device ->
+        println(device.diagnose())
+    }
+
+    println("\n========================================")
+    println("  Pipeline Smart Home selesai dieksekusi!")
+    println("========================================")
+}
