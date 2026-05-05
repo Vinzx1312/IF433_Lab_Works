@@ -36,3 +36,10 @@ fun main() {
 
     // Tambahkan alat pakan peliharaan
     homeDevices.add(SmartDevice("Picolo's Auto Feeder", "Pet Care", true, 10))
+
+    // CHECKPOINT 17: Pencarian Aman dengan let
+    println("\n=== DEVICE SEARCH ===")
+    val searchResult = homeDevices.find { it.category == "Camera" }
+    searchResult?.let {
+        println(it.diagnose())
+    }
