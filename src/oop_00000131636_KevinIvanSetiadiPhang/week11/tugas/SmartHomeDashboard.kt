@@ -9,7 +9,7 @@ fun main() {
     // CHECKPOINT 13: Initialize smart home device list
     val homeDevices = mutableListOf<SmartDevice>()
 
-    //check 14
+    // CHECKPOINT 14: Konfigurasi Pencahayaan (apply & also)
     SmartDevice("Philips WiZ Living Room", "Lighting").apply {
         isOnline = true
         powerLoad = 12
@@ -18,7 +18,7 @@ fun main() {
         println("[SETUP] Perangkat pencahayaan ditambahkan: ${it.name}")
     }
 
-    //check 15
+    // CHECKPOINT 15: Konfigurasi Keamanan (also)
     SmartDevice("Ezviz Outdoor", "Camera").apply {
         isOnline = true
         powerLoad = 5
@@ -26,7 +26,6 @@ fun main() {
         println("(LOG) Kamera terhubung")
         homeDevices.add(it)
     }
-
 
     // CHECKPOINT 16: Konfigurasi AC & Kabel (run)
     val acUnit = run {
@@ -51,10 +50,10 @@ fun main() {
     }
 
     // CHECKPOINT 19: Kalkulasi Daya dengan run
-    val totalPower = homeDevices.run { sumOf { it.powerLoad } }
+    val totalPower = homeDevices.run { sumOf { device -> device.powerLoad } }
     println("Total konsumsi daya: $totalPower Watt")
 
-    // CHECKPOINT 20: Eksekusi Dashboard - iterasi forEach
+    // CHECKPOINT 20 (final): Eksekusi Dashboard - iterasi forEach
     println("\n=== FULL DIAGNOSTICS REPORT ===")
     homeDevices.forEach { device ->
         println(device.diagnose())
