@@ -49,4 +49,8 @@ fun main() {
         println("(Opsional: Berikan chicken jerky secara manual)")
     }
 
+    // yang keluar nih ci pas outputALERT: Kibble tidak cukup! Diminta 80 gr, sisa 50 gr
+    //Siklus pengecekan dispenser pagi selesai.
+    //Kibble berhasil dikeluarkan!
+    //Makan sore sukses! Sisa stok kibble: 970 gr
 }
